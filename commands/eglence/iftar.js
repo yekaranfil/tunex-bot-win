@@ -21,7 +21,7 @@ run : async (client, message, args) => {
     let minutes = date_ob.getMinutes();
     console.log(hours + ":" + minutes);
 
-    saat = hours +3;
+    saat = hours;
     //if(saat < 9) {
       //  saat = saat-24;
     //} 
