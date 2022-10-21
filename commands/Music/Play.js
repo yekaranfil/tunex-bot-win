@@ -84,14 +84,28 @@ module.exports = {
                     return client.sendTime(message.channel, "** Eşleşme bulunamadı - **" + SearchString);
                 }
             } else {
-                     if(SearchString.indexOf("&list=")!=-1){
-                    var silinenlink = SearchString.search("&list=");
-                   // var artiklink = SearchString.length - silinenlink;
-                    var sublink = SearchString.substring(0,silinenlink)
+                if(SearchString.indexOf("?list=")!=-1){
+                    if(SearchString.indexOf("youtu.be")!=-1) {
+                        var cutpoint = SearchString.indexOf("?list=");
+                        SearchString = SearchString.substring(17,cutpoint)
+                        var linkbasi = "https://www.youtube.com/watch?v="+ SearchString.toString();
+                        SearchString=linkbasi;
+                    }
+    
+                } else if (SearchString.indexOf("&list=") !=-1){
+                   
+                    if(SearchString.indexOf("&list=")!=-1){
+                        var cutpoint = SearchString.search("&list=");
+                        SearchString = SearchString.substring(0,cutpoint)
+                    }else {
+                        SearchString;
+                    }
+                
+
                 }else {
-                    sublink = SearchString;
+                    SearchString;
                 }
-                let Searched = await player.search(sublink, message.author);
+                let Searched = await player.search(SearchString, message.author);
                 if (!player) return client.sendTime(message.channel, "❌ | **Şu anda hiçbir şey oynatılmıyor ...**");
 
                 if (Searched.loadType === "NO_MATCHES") return client.sendTime(message.channel, "** Eşleşme bulunamadı - **" + SearchString);
