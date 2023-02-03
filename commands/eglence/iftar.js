@@ -11,7 +11,7 @@ module.exports = {
     channel: ["VIEW_CHANNEL", "SEND_MESSAGES", "EMBED_LINKS"],
     member: [],
   },
-  aliases: ["İftar","akşam","İftar"],
+  aliases: ["İftar","akşam","İftar","iftarvakti"],
 
 run : async (client, message, args) => {
     var saat,sayac, imsak;
