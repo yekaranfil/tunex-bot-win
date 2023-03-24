@@ -11,7 +11,7 @@
 ## 📝 (Destek Sunucusu)[Support Server](https://discord.gg/RKQFSqh56C)
 Kodla ilgili herhangi bir hata veya sorun mu var? Bu sunucuya katılın sorunuzu sorun. https://discord.gg/RKQFSqh56C
 
-**120+** **13** farklı kategoride komutlar ve sayma!
+**120+** **13** farklı kategoride komutlar ve sayma!!
 
 - [x] •   🎉  **Fun(Eğlence)**: `etkinlik`, `iftar`, `imsak` ! 
 - [x] •   💬  **Guild(Sunucu)**: `emojirol`, `otorol`, `config`, `kullanıcı`, and **6** more! 
